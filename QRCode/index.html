@@ -13,93 +13,26 @@
     />
 
     <title>Frontend Mentor | QR code component | g0rzalka</title>
-
+    <link rel="stylesheet" href="styles.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        background-color: hsl(212, 45%, 89%);
-        font-family: "Outfit";
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 98vh;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .box {
-        background-color: hsl(0, 0%, 100%);
-        padding: 15px;
-        max-width: 320px;
-        border-radius: 15px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0px 0px 30px 1px hsl(218deg 44% 22% / 15%);
-      }
-
-      img {
-        max-width: 290px;
-        border-radius: 10px;
-      }
-
-      p {
-        font-size: 15px;
-        color: hsl(220, 15%, 55%);
-        max-width: 280px;
-        margin-top: 0;
-        margin-bottom: 20px;
-      }
-
-      .heading {
-        font-weight: 700;
-        color: hsl(218, 44%, 22%);
-      }
-
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-        margin-top: 35px;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
-      @media screen and (max-width: 375px) {
-        .box {
-          max-width: 240px;
-        }
-
-        img {
-          max-width: 210px;
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <div class="box">
-        <img src="images/image-qr-code.png" alt="QR code" />
-        <h2 class="heading">
+        <img
+          src="images/image-qr-code.png"
+          alt="There is a QR code which forwards you to www.frontendmentor.io"
+        />
+        <h1 class="heading">
           Improve your front-end skills by building projects
-        </h2>
+        </h1>
 
         <p>
           Scan the QR code to visit Frontend Mentor and take your coding skills
           to the next level
         </p>
       </div>
-    </div>
+    </main>
 
     <div class="attribution">
       Challenge by

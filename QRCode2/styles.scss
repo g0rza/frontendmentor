@@ -1,59 +1,110 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
 $bodyColor: hsl(212, 45%, 89%);
-$boxColor: hsl(0, 0%, 100%);
+$colorWhite: hsl(0, 0%, 100%);
+$colorBlue: hsl(216deg 95% 58%);
+$colorBlueHover: #0a69f7;
+
+$darkGray: rgb(24, 24, 24);
+$colorGray: rgb(48, 48, 48);
+$colorOrange: rgb(255, 115, 0);
+$colorOrangeHover: rgb(218, 98, 0);
+
+$gradient1: rgb(25, 28, 98);
+$gradient2: rgba(25, 28, 98, 1) 0%;
+$gradient3: rgba(10, 2, 25, 1) 52%;
+
 $headingColor: hsl(218, 44%, 22%);
 $textColor: hsl(220, 15%, 55%);
 $hSize: 1.4em;
 $pSize: 1em;
+$iconSize: 3.5em;
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+
   background-color: $bodyColor;
+
+  // background: $gradient1;
+  // background: radial-gradient(circle, $gradient2, $gradient3);
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   font-family: "Outfit";
-  height: 100vh;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 320px;
-    align-content: center;
+  .fa-solid {
+    font-size: $iconSize;
+    color: $colorBlue;
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: $colorBlueHover;
 
-    main {
-      background-color: $boxColor;
-      max-width: 320px;
-      border-radius: 15px;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 15px;
-
-      img {
-        max-width: 290px;
-        border-radius: 10px;
-      }
-      h1 {
-        text-align: center;
-        font-size: $hSize;
-        color: $headingColor;
-        margin: 15px 0 0 0;
-        padding: 0;
-      }
-      p {
-        text-align: center;
-        font-size: $pSize;
-        color: $textColor;
-        margin: 15px 0;
-        padding: 0;
-      }
+      // -webkit-box-shadow: 0px 8px 20px -10px rgba(10, 105, 247, 1);
+      // -moz-box-shadow: 0px 8px 20px -10px rgba(10, 105, 247, 1);
+      // box-shadow: 0px 8px 20px -10px rgba(10, 105, 247, 1);
+      transition: all 0.2s ease-in;
+      cursor: pointer;
     }
   }
-  footer {
-    bottom: 0px;
-    position: absolute;
+
+  main {
+    background-color: $colorWhite;
+    border-radius: 15px;
+    max-width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 5px 10px -5px rgba(66, 68, 90, 1);
+    box-shadow: 0px 5px 10px -5px rgba(66, 68, 90, 1);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      -webkit-box-shadow: 0px 8px 20px 0px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 0px 8px 20px 0px rgba(66, 68, 90, 1);
+      box-shadow: 0px 8px 20px 0px rgba(66, 68, 90, 1);
+      transition: all 0.3s ease-out;
+    }
+
+    img {
+      max-width: 290px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      font-size: $hSize;
+      color: $headingColor;
+      margin: 15px 0 10px 0;
+      padding: 0;
+    }
+
+    p {
+      text-align: center;
+      font-size: $pSize;
+      color: $textColor;
+      margin: 15px 0;
+      padding: 0 5px;
+    }
   }
+}
+.attribution {
+  display: flex;
+  justify-content: center;
+  bottom: 0px;
+  position: absolute;
+  font-size: 10px;
 }

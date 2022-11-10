@@ -4,48 +4,76 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: hsl(212deg, 45%, 89%);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   font-family: "Outfit";
-  height: 100vh;
+  min-height: 100vh;
 }
-body .container {
+
+.container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 320px;
-  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
 }
-body .container main {
+.container .fa-solid {
+  font-size: 3.5em;
+  color: hsl(216deg, 95%, 58%);
+  transition: all 0.2s ease-out;
+}
+.container .fa-solid:hover {
+  color: #0a69f7;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.container main {
   background-color: hsl(0deg, 0%, 100%);
-  max-width: 320px;
   border-radius: 15px;
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
+  -webkit-box-shadow: 0px 5px 10px -5px rgb(66, 68, 90);
+  -moz-box-shadow: 0px 5px 10px -5px rgb(66, 68, 90);
+  box-shadow: 0px 5px 10px -5px rgb(66, 68, 90);
+  transition: all 0.2s ease-in;
 }
-body .container main img {
+.container main:hover {
+  -webkit-box-shadow: 0px 8px 20px 0px rgb(66, 68, 90);
+  -moz-box-shadow: 0px 8px 20px 0px rgb(66, 68, 90);
+  box-shadow: 0px 8px 20px 0px rgb(66, 68, 90);
+  transition: all 0.3s ease-out;
+}
+.container main img {
   max-width: 290px;
   border-radius: 10px;
 }
-body .container main h1 {
+.container main h1 {
   text-align: center;
   font-size: 1.4em;
   color: hsl(218deg, 44%, 22%);
-  margin: 15px 0 0 0;
+  margin: 15px 0 10px 0;
   padding: 0;
 }
-body .container main p {
+.container main p {
   text-align: center;
   font-size: 1em;
   color: hsl(220deg, 15%, 55%);
   margin: 15px 0;
-  padding: 0;
+  padding: 0 5px;
 }
-body footer {
+
+.attribution {
+  display: flex;
+  justify-content: center;
   bottom: 0px;
   position: absolute;
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
